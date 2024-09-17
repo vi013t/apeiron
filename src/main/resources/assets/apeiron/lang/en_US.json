@@ -1,0 +1,48 @@
+{
+	"modifier.apeiron.breaking.name": "Breaking",
+	"modifier.apeiron.breaking.description": "Tools break instead of deleting themselves.",
+	"modifier.apeiron.lighting.name": "Lighting",
+	"modifier.apeiron.lighting.description": "Right click to place a torch.",
+	"modifier.apeiron.autosmelt.name": "Auto-Smelt",
+	"modifier.apeiron.autosmelt.description": "Automatically smelts mined blocks.",
+	"modifier.apeiron.magnetic.name": "Magnetic",
+	"modifier.apeiron.magnetic.description": "Pull in nearby items.",
+	"modifier.apeiron.silk_touch.name": "Silk Touch",
+	"modifier.apeiron.silk_touch.description": "Some mined blocks drop themselves.",
+	"modifier.apeiron.fortune.name": "Fortune",
+	"modifier.apeiron.fortune.description": "Some blocks drop extra items.",
+	"modifier.apeiron.veinmine.name": "Vein-Mine",
+	"modifier.apeiron.veinmine.description": "Break touching blocks of the same type.",
+	"modifier.apeiron.retrieving.name": "Retrieving",
+	"modifier.apeiron.retrieving.description": "All blocks can be broken and drop themselves.",
+	"modifier.apeiron.sight.name": "Sight",
+	"modifier.apeiron.sight.description": "See blocks through walls.",
+
+	"itemGroup.apeiron.mining": "Apeiron Mining",
+
+	// Mining
+	"item.apeiron.andalusite_ingot": "Andalusite Ingot",
+	"item.apeiron.danburite_ingot": "Danburite Ingot",
+	"item.apeiron.chromite_ingot": "Chromite Ingot",
+	"item.apeiron.cuprite_ingot": "Cuprite Ingot",
+	"item.apeiron.tugtupite_ingot": "Tugtupite Ingot",
+	"item.apeiron.kyanite_ingot": "Kyanite Ingot",
+	"item.apeiron.kunzite_ingot": "Kunzite Ingot",
+	"item.apeiron.sphalerite_ingot": "Sphalerite Ingot",
+	"item.apeiron.adamite_ingot": "Adamite Ingot",
+
+		// Opal
+		"item.apeiron.opal_ingot": "Opal Ingot",
+		"item.apeiron.opal_pickaxe": "Opal Pickaxe",
+		"item.apeiron.opal_axe": "Opal Axe",
+		"item.apeiron.opal_sword": "Opal Sword",
+		"item.apeiron.opal_shovel": "Opal Shovel",
+		"item.apeiron.opal_dust": "Opal Dust",
+		"item.apeiron.opal_dust_clump": "Opal Dust Clump",
+		"item.apeiron.opal_gem": "Opal Gem",
+		"item.apeiron.opal_helmet": "Opal Helmet",
+		"item.apeiron.opal_chestplate": "Opal Chestplate",
+		"item.apeiron.opal_leggings": "Opal Leggings",
+		"item.apeiron.opal_boots": "Opal Boots",
+		"block.apeiron.deepslate_opal_ore": "Deepslate Opal Ore"
+}
