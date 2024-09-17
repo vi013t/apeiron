@@ -7,18 +7,22 @@ import com.google.common.base.Supplier;
 import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.registries.DeferredItem;
 import violet.apeiron.Apeiron;
+import violet.apeiron.Apeiron.Branch;
+import violet.apeiron.branches.base.ApeironMaterials.ItemType;
 import violet.apeiron.branches.base.item.BasicModifierItem;
+import violet.apeiron.branches.base.item.MaterialItem;
 import violet.apeiron.branches.base.modifiers.types.Modifier;
-import violet.apeiron.branches.mining.item.opal.OpalAxe;
 import violet.apeiron.branches.mining.item.opal.OpalItem;
-import violet.apeiron.branches.mining.item.opal.OpalPickaxe;
-import violet.apeiron.branches.mining.item.opal.OpalShovel;
 
 public class MiningItems {
 
 	// Tier 1
 	public static final DeferredItem<Item> RAW_ANDALUSITE = basicItem("raw_andalusite");
 	public static final DeferredItem<BasicModifierItem> ANDALUSITE_INGOT = item("andalusite_ingot", BasicModifierItem.create(Modifier.BREAKING));
+	public static final DeferredItem<Item> ANDALUSITE_PICKAXE = item("andalusite_pickaxe", MaterialItem.create(ItemType.PICKAXE, Branch.MINING, 1));
+	public static final DeferredItem<Item> ANDALUSITE_AXE = item("andalusite_axe", MaterialItem.create(ItemType.AXE, Branch.MINING, 1));
+	public static final DeferredItem<Item> ANDALUSITE_SHOVEL = item("andalusite_shovel", MaterialItem.create(ItemType.SHOVEL, Branch.MINING, 1));
+	public static final DeferredItem<Item> ANDALUSITE_SWORD = item("andalusite_sword", MaterialItem.create(ItemType.SWORD, Branch.MINING, 1));
 
 	// Tier 2
 	public static final DeferredItem<Item> RAW_DANBURITE = basicItem("raw_danburite");
@@ -56,10 +60,10 @@ public class MiningItems {
 	public static final DeferredItem<Item> OPAL_DUST_CLUMP = item("opal_dust_clump", OpalItem::new);
 	public static final DeferredItem<Item> OPAL_DUST = item("opal_dust", OpalItem::new);
 	public static final DeferredItem<BasicModifierItem> OPAL_INGOT = item("opal_ingot", OpalItem::new);
-	public static final DeferredItem<OpalPickaxe> OPAL_PICKAXE = item("opal_pickaxe", OpalPickaxe::new);
-	public static final DeferredItem<OpalAxe> OPAL_AXE = item("opal_axe", OpalAxe::new);
-	public static final DeferredItem<OpalShovel> OPAL_SHOVEL = item("opal_shovel", OpalShovel::new);
-	public static final DeferredItem<Item> OPAL_SWORD = item("opal_sword", OpalItem::new);
+	public static final DeferredItem<Item> OPAL_PICKAXE = item("opal_pickaxe", MaterialItem.create(ItemType.PICKAXE, Branch.MINING, 10));
+	public static final DeferredItem<Item> OPAL_AXE = item("opal_axe", MaterialItem.create(ItemType.AXE, Branch.MINING, 10));
+	public static final DeferredItem<Item> OPAL_SHOVEL = item("opal_shovel", MaterialItem.create(ItemType.SHOVEL, Branch.MINING, 10));
+	public static final DeferredItem<Item> OPAL_SWORD = item("opal_sword", MaterialItem.create(ItemType.SWORD, Branch.MINING, 10));
 	public static final DeferredItem<Item> OPAL_HELMET = item("opal_helmet", OpalItem::new);
 	public static final DeferredItem<Item> OPAL_CHESTPLATE = item("opal_chestplate", OpalItem::new);
 	public static final DeferredItem<Item> OPAL_LEGGINGS = item("opal_leggings", OpalItem::new);

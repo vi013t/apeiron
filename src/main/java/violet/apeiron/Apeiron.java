@@ -42,6 +42,17 @@ public class Apeiron {
 		}
 	}
 
+	public static enum Branch {
+		MINING,
+		MAGIC,
+		TECH,
+		BOSS,
+		DROPS,
+		EXPLORATION,
+		FARMING,
+		BUILDING
+	}
+
 	static {
 		CREATIVE_MODE_TABS.register("mining", () -> CreativeModeTab
 			.builder()
