@@ -1,17 +1,17 @@
 package violet.apeiron.branches.mining.modifiers;
 
-import net.minecraft.network.chat.Style;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 import violet.apeiron.branches.base.modifiers.types.ArmorModifier;
 import violet.apeiron.branches.base.modifiers.types.Modifier;
+import violet.apeiron.branches.mining.MiningMaterial;
 
 public class MagneticModifier extends Modifier implements ArmorModifier {
 
 	public static final MagneticModifier INSTANCE = new MagneticModifier();
 
 	private MagneticModifier() {
-		super("magnetic", 4, Style.EMPTY.withColor(0xFF4444));
+		super("magnetic", MiningMaterial.CUPRITE);
 	}
 
 	@Override

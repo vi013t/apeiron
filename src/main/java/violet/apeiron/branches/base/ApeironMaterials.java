@@ -40,7 +40,7 @@ public class ApeironMaterials {
 
 	private static final Map<TierKey, Tier> TIERS = new HashMap<>();
 
-	public static Tier getTier(Branch branch, ItemType itemType, int tier) {
+	public static Tier getToolTier(Branch branch, ItemType itemType, int tier) {
 		int row = Arrays.asList(BRANCH_TIERS[itemType.ordinal()]).indexOf(branch) + 1;
 		return TIERS.computeIfAbsent(new TierKey(branch, tier), tierKey -> new Tier() {
 			@Override

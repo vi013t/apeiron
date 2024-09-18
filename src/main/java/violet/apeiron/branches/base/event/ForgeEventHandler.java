@@ -11,6 +11,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.RenderTooltipEvent;
 import violet.apeiron.Apeiron;
+import violet.apeiron.api.MaterialItem;
 import violet.apeiron.branches.base.data.ApeironDataComponents;
 import violet.apeiron.branches.base.data.ModifierDataComponent;
 import violet.apeiron.branches.base.modifiers.types.Modifier;
@@ -21,7 +22,7 @@ public class ForgeEventHandler {
 	@SubscribeEvent
 	public static void renderTooltip(RenderTooltipEvent.GatherComponents event) {
 
-		// Get the modifiers; if there are none, do nothing
+		// Get the modifiers; if there are none, exit and do nothing
 		ModifierDataComponent dataComponent = event.getItemStack().get(ApeironDataComponents.MODIFIERS);
 		if (dataComponent == null) return;
 		Modifier[] modifiers = dataComponent.getModifiers();
@@ -31,7 +32,7 @@ public class ForgeEventHandler {
 		event.getTooltipElements().add(Either.left(FormattedText.of("")));
 		event.getTooltipElements().add(Either.left(FormattedText.of("Modifiers:")));
 		for (Modifier modifier : modifiers) {
-			FormattedText text = FormattedText.of("    " + I18n.get(modifier.nameTranslationKey()), modifier.style());
+			FormattedText text = modifier.getMaterial().formattedText("    " + I18n.get(modifier.nameTranslationKey()));
 			if (Screen.hasShiftDown()) text = FormattedText.composite(text, FormattedText.of(" - " + I18n.get(modifier.descriptionTranslationKey()), Style.EMPTY.withColor(ChatFormatting.DARK_GRAY)));
 			event.getTooltipElements().add(Either.left(text));
 		}
@@ -40,6 +41,14 @@ public class ForgeEventHandler {
 		if (!Screen.hasShiftDown()) {
 			event.getTooltipElements().add(Either.left(FormattedText.of("    ")));
 			event.getTooltipElements().add(Either.left(FormattedText.of("Hold SHIFT for more information...", Style.EMPTY.withColor(ChatFormatting.DARK_GRAY).withItalic(true))));
+		}
+	}	
+	
+	@SubscribeEvent
+	public static void colorTooltips(RenderTooltipEvent.Color event) {
+		if (event.getItemStack().getItem() instanceof MaterialItem materialItem) {
+			event.setBorderStart(materialItem.getMaterial().secondaryColorWithAlpha());
+			event.setBorderEnd(materialItem.getMaterial().colorWithAlpha());
 		}
 	}
 }

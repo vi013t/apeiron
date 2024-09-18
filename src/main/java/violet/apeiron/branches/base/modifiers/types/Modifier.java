@@ -4,11 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-import net.minecraft.network.chat.Style;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.DiggerItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.SwordItem;
+import violet.apeiron.api.ApeironMaterial;
 import violet.apeiron.branches.base.modifiers.FlightModifier;
 import violet.apeiron.branches.base.modifiers.TillingModifier;
 import violet.apeiron.branches.mining.modifiers.AutoSmeltModifier;
@@ -55,15 +55,13 @@ public class Modifier {
 
 	private final String nameTranslationKey;
 	private final String descriptionTranslationKey;
-	private final int tier;
-	private final Style style;
+	private final ApeironMaterial material;
 	private final int index;
 
-	public Modifier(String name, int tier, Style style) {
-		this.style = style;
-		this.tier = tier;
+	public Modifier(String name, ApeironMaterial material) {
 		this.nameTranslationKey = "modifier.apeiron." + name + ".name";
 		this.descriptionTranslationKey = "modifier.apeiron." + name + ".description";
+		this.material = material;
 
 		this.index = allModifiers.size();
 		allModifiers.add(this);
@@ -113,6 +111,10 @@ public class Modifier {
 		return false;
 	}
 
+	public ApeironMaterial getMaterial() {
+		return this.material;
+	}
+
 	/**
 	 * Returns the translation key for the name of this modifier. To convert this to the user's current language, use
 	 * {@code I18n.get(modifier.nameTranslationKey())}, or for use in a {@code Component} (like when rendering a tooltip),
@@ -129,21 +131,6 @@ public class Modifier {
 	 */
 	public String descriptionTranslationKey() {
 		return this.descriptionTranslationKey;
-	}
-
-	/**
-	 * Returns the style to render the name of this modifier. This is used when rendering the tooltip on items with modifiers.
-	 * 
-	 * // TODO: This should be replaced with a more generic method that allows more flexibility, as some will have multicolored styles.
-	 * 
-	 * @return
-	 */
-	public Style style() {
-		return this.style;
-	}
-
-	public int tier() {
-		return this.tier;
 	}
 	
 	/**
