@@ -14,30 +14,36 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.item.ShovelItem;
 import net.minecraft.world.item.SwordItem;
-import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.TooltipFlag;
-import violet.apeiron.branches.base.ApeironMaterials;
-import violet.apeiron.branches.base.ApeironMaterials.ItemType;
+import violet.apeiron.api.ApeironToolTiers.GearType;
 
-public class ToolItem {
+public class GearItem {
 
-	public static Supplier<Item> create(ItemType itemType, ApeironMaterial material) {
-		return switch(itemType) {
-			case ItemType.PICKAXE -> () -> new ToolItem.Pickaxe(ApeironMaterials.getToolTier(material.branch(), itemType, material.tier()), material);
-			case ItemType.AXE -> () -> new ToolItem.Axe(ApeironMaterials.getToolTier(material.branch(), itemType, material.tier()), material);
-			case ItemType.SHOVEL -> () -> new ToolItem.Shovel(ApeironMaterials.getToolTier(material.branch(), itemType, material.tier()), material);
-			case ItemType.SWORD -> () -> new ToolItem.Sword(ApeironMaterials.getToolTier(material.branch(), itemType, material.tier()), material);
+	/**
+	 * Creates a new gear item supplier with the given gear type and material.
+	 * 
+	 * @param gearType The type of gear the item is
+	 * @param material The material the item is made out of
+	 * 
+	 * @return A supplier for the item. This should be passed to {@code Apeiron.ITEMS.register(name, supplier)}.
+	 */
+	public static Supplier<Item> create(GearType gearType, ApeironMaterial material) {
+		return switch(gearType) {
+			case GearType.PICKAXE -> () -> new GearItem.Pickaxe(material);
+			case GearType.AXE -> () -> new GearItem.Axe(material);
+			case GearType.SHOVEL -> () -> new GearItem.Shovel(material);
+			case GearType.SWORD -> () -> new GearItem.Sword(material);
 			default -> throw new NotImplementedException("Armor materials are not yet implemented");
 		};
 	}
 
-	private static class Pickaxe extends PickaxeItem implements MaterialItem {
+	private static class Pickaxe extends PickaxeItem implements Materialed {
 
 		private final ApeironMaterial material;
 
-		public Pickaxe(Tier material, ApeironMaterial apeironMaterial) {
-			super(material, new Item.Properties());
-			this.material = apeironMaterial;
+		public Pickaxe(ApeironMaterial material) {
+			super(ApeironToolTiers.getToolTier(GearType.PICKAXE, material), new Item.Properties());
+			this.material = material;
 		}
 
 		@Override
@@ -52,13 +58,13 @@ public class ToolItem {
 		}
 	}
 
-	private static class Axe extends AxeItem implements MaterialItem {
+	private static class Axe extends AxeItem implements Materialed {
 
 		private final ApeironMaterial material;
 
-		public Axe(Tier material, ApeironMaterial apeironMaterial) {
-			super(material, new Item.Properties());
-			this.material = apeironMaterial;
+		public Axe(ApeironMaterial material) {
+			super(ApeironToolTiers.getToolTier(GearType.AXE, material), new Item.Properties());
+			this.material = material;
 		}
 
 		@Override
@@ -73,13 +79,13 @@ public class ToolItem {
 		}
 	}
 
-	private static class Shovel extends ShovelItem implements MaterialItem {
+	private static class Shovel extends ShovelItem implements Materialed {
 
 		private final ApeironMaterial material;
 
-		public Shovel(Tier material, ApeironMaterial apeironMaterial) {
-			super(material, new Item.Properties());
-			this.material = apeironMaterial;
+		public Shovel(ApeironMaterial material) {
+			super(ApeironToolTiers.getToolTier(GearType.SHOVEL, material), new Item.Properties());
+			this.material = material;
 		}
 
 		@Override
@@ -94,13 +100,13 @@ public class ToolItem {
 		}
 	}
 
-	private static class Sword extends SwordItem implements MaterialItem {
+	private static class Sword extends SwordItem implements Materialed {
 
 		private final ApeironMaterial material;
 
-		public Sword(Tier material, ApeironMaterial apeironMaterial) {
-			super(material, new Item.Properties().attributes(SwordItem.createAttributes(material, 0, -2F)));
-			this.material = apeironMaterial;
+		public Sword(ApeironMaterial material) {
+			super(ApeironToolTiers.getToolTier(GearType.SWORD, material), new Item.Properties().attributes(SwordItem.createAttributes(ApeironToolTiers.getToolTier(GearType.SWORD, material), 0, -2F)));
+			this.material = material;
 		}
 
 		@Override

@@ -1,7 +1,6 @@
 package violet.apeiron.branches.base.modifiers;
 
-import net.neoforged.neoforge.common.ItemAbilities;
-import net.neoforged.neoforge.event.level.BlockEvent.BlockToolModificationEvent;
+import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 import violet.apeiron.branches.base.modifiers.types.Modifier;
 import violet.apeiron.branches.base.modifiers.types.ToolModifier;
 import violet.apeiron.branches.mining.MiningMaterial;
@@ -15,9 +14,6 @@ public class TillingModifier extends Modifier implements ToolModifier {
 	}
 
 	@Override
-	@SuppressWarnings("null")
-	public void onRightClickBlock(BlockToolModificationEvent event) {
-		event.setFinalState(event.getState().getToolModifiedState(null, ItemAbilities.HOE_TILL, false));
-	}
+	public void onRightClickBlock(PlayerInteractEvent.RightClickBlock event) {}
 }
 

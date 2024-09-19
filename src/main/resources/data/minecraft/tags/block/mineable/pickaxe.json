@@ -1,0 +1,15 @@
+{
+	"replace": false,
+	"values": [
+		"apeiron:andalusite_ore",
+		"apeiron:danburite_ore",
+		"apeiron:chromite_ore",
+		"apeiron:cuprite_ore",
+		"apeiron:tugtupite_ore",
+		"apeiron:kyanite_ore",
+		"apeiron:kunzite_ore",
+		"apeiron:deepslate_sphalerite_ore",
+		"apeiron:deepslate_adamite_ore",
+		"apeiron:deepslate_opal_ore"
+	]
+}

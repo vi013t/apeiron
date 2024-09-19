@@ -10,11 +10,13 @@ import net.minecraft.network.chat.Style;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.RenderTooltipEvent;
+import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 import violet.apeiron.Apeiron;
-import violet.apeiron.api.MaterialItem;
+import violet.apeiron.api.Materialed;
 import violet.apeiron.branches.base.data.ApeironDataComponents;
 import violet.apeiron.branches.base.data.ModifierDataComponent;
 import violet.apeiron.branches.base.modifiers.types.Modifier;
+import violet.apeiron.branches.base.modifiers.types.ToolModifier;
 
 @EventBusSubscriber(modid = Apeiron.MODID)
 public class ForgeEventHandler {
@@ -46,9 +48,23 @@ public class ForgeEventHandler {
 	
 	@SubscribeEvent
 	public static void colorTooltips(RenderTooltipEvent.Color event) {
-		if (event.getItemStack().getItem() instanceof MaterialItem materialItem) {
+		if (event.getItemStack().getItem() instanceof Materialed materialItem) {
 			event.setBorderStart(materialItem.getMaterial().secondaryColorWithAlpha());
 			event.setBorderEnd(materialItem.getMaterial().colorWithAlpha());
+		}
+	}
+	
+	@SubscribeEvent
+	public static void onRightClickBlock(PlayerInteractEvent.RightClickBlock event) {
+		ModifierDataComponent dataComponent = event.getItemStack().get(ApeironDataComponents.MODIFIERS);
+		if (dataComponent == null) return;
+		Modifier[] modifiers = dataComponent.getModifiers();
+		if (modifiers.length == 0) return;
+
+		for (Modifier modifier : modifiers) {
+			if (modifier instanceof ToolModifier toolModifier) {
+				toolModifier.onRightClickBlock(event);
+			}
 		}
 	}
 }

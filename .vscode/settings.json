@@ -1,17 +1,21 @@
 {
   "java.compile.nullAnalysis.mode": "automatic",
   "cSpell.words": [
-	"apeiron",
-	"autosmelt",
-	"chestplate",
-	"danburite",
-	"deepslate",
-	"MODID",
-	"NETHERITE",
-	"tanzanite",
-	"tugtupite",
-	"Veinmine"
-],
+    "adic",
+    "apeiron",
+    "autosmelt",
+    "chestplate",
+    "danburite",
+    "deepslate",
+    "Materialed",
+    "MODID",
+    "NETHERITE",
+    "primality",
+    "tanzanite",
+    "terrio",
+    "tugtupite",
+    "Veinmine"
+  ],
   "java.configuration.updateBuildConfiguration": "automatic",
   "java.format.settings.url": "eclipse-formatter.xml"
 }

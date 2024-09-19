@@ -26,7 +26,7 @@ public class Apeiron {
 
 	public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Apeiron.MODID);
 	public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(Apeiron.MODID);
-	private static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Apeiron.MODID);
+	private static final DeferredRegister<CreativeModeTab> CREATIVE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Apeiron.MODID);
 
 	/** 
 	 * A map of all creative tabs in the mod and the items contained within them. This is used when initializing the creative tabs to select which items
@@ -42,6 +42,10 @@ public class Apeiron {
 		}
 	}
 
+	/**
+	 * A branch in the mod. Apeiron has 8 core "branches" which are individual paths of progression, each containing 10 tiers. {@code Branches},
+	 * in the code, hold no data; They're simply tags, used for things like calculating sword damage and pickaxe break speed.
+	 */
 	public static enum Branch {
 		MINING,
 		MAGIC,
@@ -54,7 +58,7 @@ public class Apeiron {
 	}
 
 	static {
-		CREATIVE_MODE_TABS.register("mining", () -> CreativeModeTab
+		CREATIVE_TABS.register("mining", () -> CreativeModeTab
 			.builder()
 			.title(Component.translatable("itemGroup." + Apeiron.MODID + ".mining"))
 			.icon(() -> MiningItems.OPAL_DUST.get().getDefaultInstance())
@@ -80,6 +84,6 @@ public class Apeiron {
 		ITEMS.register(modEventBus);
 		BLOCKS.register(modEventBus);
 
-		CREATIVE_MODE_TABS.register(modEventBus);
+		CREATIVE_TABS.register(modEventBus);
 	}
 }

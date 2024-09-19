@@ -1,7 +1,7 @@
 package violet.apeiron.branches.base.modifiers.types;
 
+import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 import net.neoforged.neoforge.event.level.BlockEvent;
-import net.neoforged.neoforge.event.level.BlockEvent.BlockToolModificationEvent;
 
 /**
  * A tool modifier. This is an interface implemented by some classes that extend {@link violet.apeiron.branches.base.modifiers.types.data.Modifier Modifier}, specifically those that can be applied to tools.
@@ -32,5 +32,5 @@ public interface ToolModifier {
 	 * @param event The block right-click event. This is a generic block-click event, but this method is guaranteed to only be called when the block clicked is done so with a tool in
 	 * hand that has this modifier applied to it.
 	 */
-	public default void onRightClickBlock(BlockToolModificationEvent event) {}
+	public default void onRightClickBlock(PlayerInteractEvent.RightClickBlock event) {}
 }

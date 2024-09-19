@@ -1,4 +1,4 @@
-package violet.apeiron.branches.base;
+package violet.apeiron.api;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -12,7 +12,7 @@ import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import violet.apeiron.Apeiron.Branch;
 
-public class ApeironMaterials {
+public class ApeironToolTiers {
 
 	private static final Branch[][] BRANCH_TIERS = new Branch[][] {
 		/* Sword      */ { Branch.DROPS, Branch.BOSS, Branch.MAGIC, Branch.MINING, Branch.TECH, Branch.EXPLORATION, Branch.FARMING, Branch.BUILDING },
@@ -25,7 +25,10 @@ public class ApeironMaterials {
 		/* Boots      */ { Branch.BUILDING, Branch.TECH, Branch.BOSS, Branch.DROPS, Branch.FARMING, Branch.MINING, Branch.EXPLORATION, Branch.MAGIC }
 	};
 
-	public static enum ItemType {
+	/**
+	 * A type of "gear item" in the mod. These are the types of items that the mod adds progression for, such as "sword", "pickaxe", etc.
+	 */
+	public static enum GearType {
 		SWORD,
 		PICKAXE,
 		AXE,
@@ -40,32 +43,32 @@ public class ApeironMaterials {
 
 	private static final Map<TierKey, Tier> TIERS = new HashMap<>();
 
-	public static Tier getToolTier(Branch branch, ItemType itemType, int tier) {
-		int row = Arrays.asList(BRANCH_TIERS[itemType.ordinal()]).indexOf(branch) + 1;
-		return TIERS.computeIfAbsent(new TierKey(branch, tier), tierKey -> new Tier() {
+	public static Tier getToolTier(GearType itemType, ApeironMaterial material) {
+		int row = Arrays.asList(BRANCH_TIERS[itemType.ordinal()]).indexOf(material.branch()) + 1;
+		return TIERS.computeIfAbsent(new TierKey(material.branch(), material.tier()), tierKey -> new Tier() {
 			@Override
 			public float getAttackDamageBonus() {
-				double base = Math.pow(1.62, tier - 9.5) + 1.22;
-				double exponentOffset = 27 - 1.75 * tier;
-				double constantOffset = Math.pow(2, tier + 1.25);
+				double base = Math.pow(1.62, material.tier() - 9.5) + 1.22;
+				double exponentOffset = 27 - 1.75 * material.tier();
+				double constantOffset = Math.pow(2, material.tier() + 1.25);
 
 				return (float) (Math.pow(base, exponentOffset - row) + constantOffset + 4);
 			}
 
 			@Override
 			public float getSpeed() {
-				double base = Math.pow(1.62, tier - 9.5) + 1.22;
-				double exponentOffset = 27 - 1.75 * tier;
-				double constantOffset = Math.pow(2, tier + 1.25);
+				double base = Math.pow(1.62, material.tier() - 9.5) + 1.22;
+				double exponentOffset = 27 - 1.75 * material.tier();
+				double constantOffset = Math.pow(2, material.tier() + 1.25);
 
 				return (float) (Math.pow(base, exponentOffset - row) + constantOffset + 9);
 			}
 
 			@Override
 			public int getUses() {
-				double base = Math.pow(1.62, tier - 9.5) + 1.22;
-				double exponentOffset = 27 - 1.75 * tier;
-				double constantOffset = Math.pow(2, tier + 1.25);
+				double base = Math.pow(1.62, material.tier() - 9.5) + 1.22;
+				double exponentOffset = 27 - 1.75 * material.tier();
+				double constantOffset = Math.pow(2, material.tier() + 1.25);
 
 				return (int) (Math.pow(base, exponentOffset - row) + constantOffset + 2500);
 			}
