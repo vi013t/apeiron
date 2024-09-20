@@ -1,4 +1,4 @@
-package violet.apeiron.branches.base.item;
+package violet.apeiron.api;
 
 import java.util.List;
 
@@ -13,16 +13,15 @@ import violet.apeiron.branches.base.data.ApeironDataComponents;
 import violet.apeiron.branches.base.data.ModifierDataComponent;
 import violet.apeiron.branches.base.modifiers.types.Modifier;
 
-public class BasicModifierItem extends Item implements ModifierItem {
+public class ModifierItem extends Item {
 
 	private final Modifier modifier;
 
-	public BasicModifierItem(Modifier modifier) {
+	public ModifierItem(Modifier modifier) {
 		super(new Item.Properties().component(ApeironDataComponents.MODIFIERS.value(), new ModifierDataComponent(modifier)));
 		this.modifier = modifier;
 	}
 
-	@Override
 	public Modifier getModifier() {
 		return this.modifier;
 	}
@@ -32,7 +31,7 @@ public class BasicModifierItem extends Item implements ModifierItem {
 		components.add(this.modifier.getMaterial().component(I18n.get(getDescriptionId())));
 	}
 
-	public static Supplier<BasicModifierItem> create(Modifier modifier) {
-		return () -> new BasicModifierItem(modifier);
+	public static Supplier<ModifierItem> create(Modifier modifier) {
+		return () -> new ModifierItem(modifier);
 	}
 }

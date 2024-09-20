@@ -1,4 +1,4 @@
-package violet.apeiron.branches.base.event;
+package violet.apeiron.event;
 
 import com.mojang.datafixers.util.Either;
 
@@ -12,7 +12,8 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.RenderTooltipEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 import violet.apeiron.Apeiron;
-import violet.apeiron.api.Materialed;
+import violet.apeiron.api.HasMaterial;
+import violet.apeiron.api.ModifierItem;
 import violet.apeiron.branches.base.data.ApeironDataComponents;
 import violet.apeiron.branches.base.data.ModifierDataComponent;
 import violet.apeiron.branches.base.modifiers.types.Modifier;
@@ -48,9 +49,14 @@ public class ForgeEventHandler {
 	
 	@SubscribeEvent
 	public static void colorTooltips(RenderTooltipEvent.Color event) {
-		if (event.getItemStack().getItem() instanceof Materialed materialItem) {
+		if (event.getItemStack().getItem() instanceof HasMaterial materialItem) {
 			event.setBorderStart(materialItem.getMaterial().secondaryColorWithAlpha());
 			event.setBorderEnd(materialItem.getMaterial().colorWithAlpha());
+		}
+
+		if (event.getItemStack().getItem() instanceof ModifierItem modifierItem) {
+			event.setBorderStart(modifierItem.getModifier().getMaterial().secondaryColorWithAlpha());
+			event.setBorderEnd(modifierItem.getModifier().getMaterial().colorWithAlpha());
 		}
 	}
 	

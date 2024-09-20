@@ -1,6 +1,6 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-		"all": "apeiron:block/kunzite_ore"
+		"all": "apeiron:block/tanzanite_ore"
 	}
 }

@@ -9,6 +9,6 @@ public class FortuneModifier extends Modifier implements ToolModifier {
 	public static final FortuneModifier INSTANCE = new FortuneModifier();
 	
 	public FortuneModifier() {
-		super("fortune", MiningMaterial.KUNZITE);
+		super("fortune", MiningMaterial.TANZANITE);
 	}
 }

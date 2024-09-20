@@ -37,7 +37,7 @@ public class GearItem {
 		};
 	}
 
-	private static class Pickaxe extends PickaxeItem implements Materialed {
+	private static class Pickaxe extends PickaxeItem implements HasMaterial {
 
 		private final ApeironMaterial material;
 
@@ -58,7 +58,7 @@ public class GearItem {
 		}
 	}
 
-	private static class Axe extends AxeItem implements Materialed {
+	private static class Axe extends AxeItem implements HasMaterial {
 
 		private final ApeironMaterial material;
 
@@ -79,7 +79,7 @@ public class GearItem {
 		}
 	}
 
-	private static class Shovel extends ShovelItem implements Materialed {
+	private static class Shovel extends ShovelItem implements HasMaterial {
 
 		private final ApeironMaterial material;
 
@@ -100,7 +100,7 @@ public class GearItem {
 		}
 	}
 
-	private static class Sword extends SwordItem implements Materialed {
+	private static class Sword extends SwordItem implements HasMaterial {
 
 		private final ApeironMaterial material;
 

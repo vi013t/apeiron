@@ -12,13 +12,13 @@ package violet.apeiron.api;
  * This is used, for example, by the event handler when rendering tooltips; Tooltips for {@code Materialed} items
  * will be rendered in the color of the material.
  */
-public interface Materialed {
+public interface HasMaterial {
 
 	/**
-	 * Returns the material associated with this {@link Materialed}. For a more thorough explanation on what
-	 * "associated" means exactly, see the {@link Materialed} documentation.
+	 * Returns the material associated with this {@link HasMaterial}. For a more thorough explanation on what
+	 * "associated" means exactly, see the {@link HasMaterial} documentation.
 	 * 
-	 * @return The material associated with this {@link Materialed}.
+	 * @return The material associated with this {@link HasMaterial}.
 	 */
 	public abstract ApeironMaterial getMaterial();
 }

@@ -8,9 +8,9 @@ import net.minecraft.world.inventory.ItemCombinerMenuSlotDefinition;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.state.BlockState;
+import violet.apeiron.api.ModifierItem;
 import violet.apeiron.branches.base.data.ApeironDataComponents;
 import violet.apeiron.branches.base.data.ModifierDataComponent;
-import violet.apeiron.branches.base.item.BasicModifierItem;
 
 public class TinkerTableMenu extends ItemCombinerMenu {
 
@@ -72,7 +72,7 @@ new SimpleMenuProvider(
 	public void createResult() {
 		ItemStack baseItemStack = this.baseItem();
 		ItemStack modifierItemStack = this.modifierItem();
-        if (modifierItemStack.getItem() instanceof BasicModifierItem modifierItem && modifierItem.getModifier().canBeAppliedTo(baseItemStack)) {
+        if (modifierItemStack.getItem() instanceof ModifierItem modifierItem && modifierItem.getModifier().canBeAppliedTo(baseItemStack)) {
 			ItemStack output = baseItemStack.copy();
 			output.update(ApeironDataComponents.MODIFIERS, ModifierDataComponent.EMPTY, modifiers -> modifiers.addModifier(modifierItem.getModifier()));
 			this.setOutputItem(output);

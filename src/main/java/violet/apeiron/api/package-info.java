@@ -1,2 +1,3 @@
 @javax.annotation.ParametersAreNonnullByDefault
+@net.minecraft.MethodsReturnNonnullByDefault
 package violet.apeiron.api;

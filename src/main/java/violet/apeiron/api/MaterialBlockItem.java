@@ -9,7 +9,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 
-public class MaterialBlockItem extends BlockItem implements Materialed {
+public class MaterialBlockItem extends BlockItem implements HasMaterial {
 
 	public MaterialBlockItem(MaterialBlock block) {
 		super(block, new Item.Properties());

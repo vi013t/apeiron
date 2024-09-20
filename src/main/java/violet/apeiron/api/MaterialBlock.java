@@ -2,7 +2,7 @@ package violet.apeiron.api;
 
 import net.minecraft.world.level.block.Block;
 
-public class MaterialBlock extends Block implements Materialed {
+public class MaterialBlock extends Block implements HasMaterial {
 
 	private final ApeironMaterial material;
 

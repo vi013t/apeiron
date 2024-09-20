@@ -10,10 +10,10 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 
 /**
- * A basic intersection of the {@link Item} class and the {@link Materialed} interface. This class is an item subclass
- * that stores a single immutable {@link ApeironMaterial} to implement {@link Materialed} with.
+ * A basic intersection of the {@link Item} class and the {@link HasMaterial} interface. This class is an item subclass
+ * that stores a single immutable {@link ApeironMaterial} to implement {@link HasMaterial} with.
  */
-public class MaterialItem extends Item implements Materialed {
+public class MaterialItem extends Item implements HasMaterial {
 
 	private final ApeironMaterial material;
 

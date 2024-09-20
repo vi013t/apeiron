@@ -57,11 +57,12 @@ public class Apeiron {
 		BUILDING
 	}
 
+	// Register creative tabs
 	static {
 		CREATIVE_TABS.register("mining", () -> CreativeModeTab
 			.builder()
 			.title(Component.translatable("itemGroup." + Apeiron.MODID + ".mining"))
-			.icon(() -> MiningItems.OPAL_DUST.get().getDefaultInstance())
+			.icon(() -> MiningItems.SPHALERITE_INGOT.get().getDefaultInstance())
 			.displayItems((parameters, output) -> {
 				for (DeferredItem<? extends Item> item : CREATIVE_TAB_ITEMS.get(ApeironCreativeTab.MINING)) {
 					output.accept(item.get().getDefaultInstance());

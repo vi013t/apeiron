@@ -12,7 +12,7 @@ import net.neoforged.neoforge.event.level.BlockEvent;
  * 
  * <br></br>
  * 
- * The events are called in Apeiron's {@link violet.apeiron.branches.base.event.ForgeEventHandler Forge event handler}.
+ * The events are called in Apeiron's {@link violet.apeiron.event.ForgeEventHandler Forge event handler}.
  */
 public interface ToolModifier {
 

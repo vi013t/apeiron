@@ -27,7 +27,7 @@ Below is a table of the material tiers for each branch:
 | Tier 4  | Cuprite    | Osmium    | Karkinos Claw    | Magnio   | Rosim       | Gladiolus |
 | Tier 5  | Tugtupite  | Germanium | Unicorn Horn     | Lushio   | Lupim       | Dianthus  |
 | Tier 6  | Kyanite    | Lutetium  | Kraken Tentacle  | Aquio    | Azim        | Hibiscus  |
-| Tier 7  | Kunzite    | Titanium  | Griffin Talon    | Tenebrio | Purpim      | Crocus    |
+| Tier 7  | Tanzanite    | Titanium  | Griffin Talon    | Tenebrio | Purpim      | Crocus    |
 | Tier 8  | Sphalerite | Niobium   | Phoenix Feather  | Flario   | Fueim       | Vibrus    |
 | Tier 9  | Adamite    | Chromium  | Cyclops Eye      | Tranquio | Aquim       | Hydrangus | 
 | Tier 10 | Opal       | Iridium   | Dragon Scale     | Infinio  | Arcim       | Iris      |
@@ -45,7 +45,7 @@ Below is a list of all modifiers, materials, and effects.
 | Auto-Smelt | Blocks mined drop their smelted variants.                                                    | Chromite   | 3    | Mining |
 | Magnetic   | Nearby ground items move towards the player.                                                 | Cuprite    | 4    | Mining |
 | Silk Touch | Some blocks that normally wouldn't, drop themselves when mined.                              | Kyanite    | 6    | Mining |
-| Fortune    | Some blocks drop extra items when mined.                                                     | Kunzite    | 7    | Mining |
+| Fortune    | Some blocks drop extra items when mined.                                                     | Tanzanite    | 7    | Mining |
 | Vein-Mine  | Hold a key to mine adjacent blocks of the same type all at once.                             | Sphalerite | 8    | Mining |
 | Retrieving | All blocks are breakable and drop themselves.                                                | Adamite    | 9    | Mining |
 | Infinity   | Entities move slower the closer they get to the player.                                      | Infinio    | 10   | Magic  |
@@ -63,6 +63,8 @@ Apeiron has 4 "core modifiers". Core modifiers are special modifiers that can't 
 Each core modifier has 10 tiers, and each tier is made up of the 8 items of that tier of each branch. The table below shows the required materials for each core modifier.
 
 ### Inert modifiers
+
+When making a gear item out of a modifier material, the gear item will *always* get the modifier from that material automatically. This means sometimes tools will get armor modifiers, or vice versa. These modifiers are called *inert modifiers*. This means, essentially, that they don't do anything. In other words, you're encouraged to make tools and armor out of materials that have modifiers that can be applied to them.
 
 ## Material Specialties
 
@@ -91,3 +93,25 @@ Specifically, below is a chart of best-to-worst for each material and tool type.
 | Worst | Building    | Drops       | Mining      | Exploration | Farming     | Tech        | Boss        | Magic       |
 
 In this chart, each tier within each row uses the same "material" in terms of base durability, protection, damage, efficiency, etc. For example, A tier 7 magic pickaxe will have the same durability and break speed as a tier 7 building axe, because magic pickaxe and building axe are in the same row. However, a magic pickaxe will have more durability and a faster break speed than a magic axe, because magic is in row 2 of the pickaxe column, but row 5 of the axe column.
+
+## Accessibility
+
+Apeiron is designed with accessibility in mind.
+
+### Languages
+
+Apeiron supports the following languages:
+
+- English (US)
+- Espa&ntilde;ol (Mexico)
+- LOLCAT (Kingdom of Cats)
+- Pirate Speak (The Seven Seas)
+- Shakespearean English (Kingdom of England)
+
+## Contributing
+
+Apeiron is accepting contributions in the form of issues and pull requests.
+
+### Issues
+
+### Pull Requests
