@@ -3,8 +3,8 @@ package violet.apeiron.branches.mining;
 import java.util.function.Supplier;
 
 import violet.apeiron.Apeiron.Branch;
-import violet.apeiron.api.ApeironMaterial;
-import violet.apeiron.branches.base.modifiers.types.Modifier;
+import violet.apeiron.api.materials.ApeironMaterial;
+import violet.apeiron.api.modifiers.Modifier;
 
 public class MiningMaterial extends ApeironMaterial {
 

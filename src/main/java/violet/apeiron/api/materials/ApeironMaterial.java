@@ -1,4 +1,4 @@
-package violet.apeiron.api;
+package violet.apeiron.api.materials;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -9,7 +9,9 @@ import net.minecraft.network.chat.FormattedText;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.network.chat.Style;
 import violet.apeiron.Apeiron.Branch;
-import violet.apeiron.branches.base.modifiers.types.Modifier;
+import violet.apeiron.api.GearItem;
+import violet.apeiron.api.modifiers.Modifier;
+import violet.apeiron.api.modifiers.ModifierItem;
 import violet.apeiron.branches.mining.OpalUtils;
 
 /**

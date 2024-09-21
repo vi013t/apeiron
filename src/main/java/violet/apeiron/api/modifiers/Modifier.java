@@ -1,4 +1,4 @@
-package violet.apeiron.branches.base.modifiers.types;
+package violet.apeiron.api.modifiers;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +8,7 @@ import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.DiggerItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.SwordItem;
-import violet.apeiron.api.ApeironMaterial;
+import violet.apeiron.api.materials.ApeironMaterial;
 import violet.apeiron.branches.base.modifiers.FlightModifier;
 import violet.apeiron.branches.base.modifiers.TillingModifier;
 import violet.apeiron.branches.mining.modifiers.AutoSmeltModifier;

@@ -1,4 +1,4 @@
-package violet.apeiron.branches.base.data;
+package violet.apeiron.data;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -6,7 +6,7 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
-import violet.apeiron.branches.base.modifiers.types.Modifier;
+import violet.apeiron.api.modifiers.Modifier;
 import violet.apeiron.util.Serializer;
 
 public class ModifierDataComponent {

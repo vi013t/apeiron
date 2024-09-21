@@ -1,4 +1,4 @@
-package violet.apeiron.api;
+package violet.apeiron.api.materials;
 
 import java.util.List;
 import java.util.function.Supplier;

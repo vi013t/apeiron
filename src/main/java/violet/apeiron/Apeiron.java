@@ -16,9 +16,10 @@ import net.neoforged.fml.config.ModConfig;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import violet.apeiron.branches.base.block.BaseBlocks;
-import violet.apeiron.branches.base.data.ApeironDataComponents;
 import violet.apeiron.branches.mining.MiningBlocks;
 import violet.apeiron.branches.mining.MiningItems;
+import violet.apeiron.data.ApeironDataComponents;
+import violet.apeiron.data.ApeironTags;
 
 @Mod(Apeiron.MODID)
 public class Apeiron {
@@ -81,6 +82,7 @@ public class Apeiron {
 		BaseBlocks.load();
 
 		ApeironDataComponents.register(modEventBus);
+		ApeironTags.load();
 
 		ITEMS.register(modEventBus);
 		BLOCKS.register(modEventBus);

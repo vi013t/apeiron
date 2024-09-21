@@ -1,10 +1,10 @@
-package violet.apeiron.branches.base.modifiers.types;
+package violet.apeiron.api.modifiers;
 
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
 import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 
 /**
- * An armor modifier. This is an interface implemented by some classes that extend {@link violet.apeiron.branches.base.modifiers.types.data.Modifier Modifier}, specifically those that can be applied to armor.
+ * An armor modifier. This is an interface implemented by some classes that extend {@link violet.apeiron.api.modifiers.data.Modifier Modifier}, specifically those that can be applied to armor.
  * For example, the fire resistance modifier is a modifier that can only be applied to armor, so it implements this interface. The interface provides methods called by event listeners
  * that fire based on certain conditions. For example, it provides a method that fires every tick while the player is wearing the armor, so modifiers like fire resistance can apply
  * their affect every tick. All of the event listener methods in this interface have a default empty implementation, so they can be selectively implemented as needed.

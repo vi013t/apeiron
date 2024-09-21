@@ -8,9 +8,9 @@ import net.neoforged.neoforge.registries.DeferredItem;
 import violet.apeiron.Apeiron;
 import violet.apeiron.api.ApeironToolTiers.GearType;
 import violet.apeiron.api.GearItem;
-import violet.apeiron.api.MaterialItem;
-import violet.apeiron.api.ModifierItem;
-import violet.apeiron.branches.base.modifiers.types.Modifier;
+import violet.apeiron.api.materials.MaterialItem;
+import violet.apeiron.api.modifiers.Modifier;
+import violet.apeiron.api.modifiers.ModifierItem;
 
 public class MiningItems {
 

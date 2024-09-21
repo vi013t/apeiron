@@ -1,10 +1,10 @@
-package violet.apeiron.branches.base.modifiers.types;
+package violet.apeiron.api.modifiers;
 
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 import net.neoforged.neoforge.event.level.BlockEvent;
 
 /**
- * A tool modifier. This is an interface implemented by some classes that extend {@link violet.apeiron.branches.base.modifiers.types.data.Modifier Modifier}, specifically those that can be applied to tools.
+ * A tool modifier. This is an interface implemented by some classes that extend {@link violet.apeiron.api.modifiers.data.Modifier Modifier}, specifically those that can be applied to tools.
  * For example, the auto-smelt modifier is a modifier that can only be applied to tools, so it implements this interface. The interface provides methods called by event listeners
  * that fire based on certain conditions. For example, it provides a method that fires when the player breaks the block with a tool with this modifier, so that modifiers like
  * auto-smelt can listen in on that event and smelt the output item. All of the event listener methods in this interface have a default empty implementation, so they can be selectively 

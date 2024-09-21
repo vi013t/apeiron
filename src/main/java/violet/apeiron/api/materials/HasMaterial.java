@@ -1,4 +1,4 @@
-package violet.apeiron.api;
+package violet.apeiron.api.materials;
 
 /**
  * Indicates that an object (typically an item or block) relates in some way to a material. Generally, for items,

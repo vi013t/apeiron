@@ -1,4 +1,4 @@
-package violet.apeiron.api;
+package violet.apeiron.api.modifiers;
 
 import java.util.List;
 
@@ -9,9 +9,8 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
-import violet.apeiron.branches.base.data.ApeironDataComponents;
-import violet.apeiron.branches.base.data.ModifierDataComponent;
-import violet.apeiron.branches.base.modifiers.types.Modifier;
+import violet.apeiron.data.ApeironDataComponents;
+import violet.apeiron.data.ModifierDataComponent;
 
 public class ModifierItem extends Item {
 

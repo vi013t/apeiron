@@ -4,8 +4,8 @@ import java.util.List;
 
 import net.minecraft.world.entity.Entity;
 import net.neoforged.neoforge.event.tick.PlayerTickEvent;
-import violet.apeiron.branches.base.modifiers.types.ArmorModifier;
-import violet.apeiron.branches.base.modifiers.types.Modifier;
+import violet.apeiron.api.modifiers.ArmorModifier;
+import violet.apeiron.api.modifiers.Modifier;
 import violet.apeiron.branches.mining.MiningMaterial;
 
 public class RadioactiveModifier extends Modifier implements ArmorModifier {

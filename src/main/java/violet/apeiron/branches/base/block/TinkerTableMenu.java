@@ -8,9 +8,9 @@ import net.minecraft.world.inventory.ItemCombinerMenuSlotDefinition;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.state.BlockState;
-import violet.apeiron.api.ModifierItem;
-import violet.apeiron.branches.base.data.ApeironDataComponents;
-import violet.apeiron.branches.base.data.ModifierDataComponent;
+import violet.apeiron.api.modifiers.ModifierItem;
+import violet.apeiron.data.ApeironDataComponents;
+import violet.apeiron.data.ModifierDataComponent;
 
 public class TinkerTableMenu extends ItemCombinerMenu {
 

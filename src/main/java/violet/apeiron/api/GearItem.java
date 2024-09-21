@@ -16,6 +16,8 @@ import net.minecraft.world.item.ShovelItem;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.TooltipFlag;
 import violet.apeiron.api.ApeironToolTiers.GearType;
+import violet.apeiron.api.materials.ApeironMaterial;
+import violet.apeiron.api.materials.HasMaterial;
 
 public class GearItem {
 

@@ -13,6 +13,7 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import violet.apeiron.Apeiron.Branch;
+import violet.apeiron.api.materials.ApeironMaterial;
 
 public class ApeironToolTiers {
 

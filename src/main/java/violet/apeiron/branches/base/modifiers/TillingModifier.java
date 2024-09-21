@@ -1,8 +1,8 @@
 package violet.apeiron.branches.base.modifiers;
 
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
-import violet.apeiron.branches.base.modifiers.types.Modifier;
-import violet.apeiron.branches.base.modifiers.types.ToolModifier;
+import violet.apeiron.api.modifiers.Modifier;
+import violet.apeiron.api.modifiers.ToolModifier;
 import violet.apeiron.branches.mining.MiningMaterial;
 
 public class TillingModifier extends Modifier implements ToolModifier {

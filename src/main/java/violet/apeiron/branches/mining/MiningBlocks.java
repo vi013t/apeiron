@@ -5,9 +5,9 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredItem;
 import violet.apeiron.Apeiron;
 import violet.apeiron.Apeiron.ApeironCreativeTab;
-import violet.apeiron.api.ApeironMaterial;
-import violet.apeiron.api.MaterialBlock;
-import violet.apeiron.api.MaterialBlockItem;
+import violet.apeiron.api.materials.ApeironMaterial;
+import violet.apeiron.api.materials.MaterialBlock;
+import violet.apeiron.api.materials.MaterialBlockItem;
 
 public class MiningBlocks {
 	

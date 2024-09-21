@@ -3,8 +3,8 @@ package violet.apeiron.branches.mining.modifiers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
-import violet.apeiron.branches.base.modifiers.types.Modifier;
-import violet.apeiron.branches.base.modifiers.types.ToolModifier;
+import violet.apeiron.api.modifiers.Modifier;
+import violet.apeiron.api.modifiers.ToolModifier;
 import violet.apeiron.branches.mining.MiningMaterial;
 
 public class LightingModifier extends Modifier implements ToolModifier {
