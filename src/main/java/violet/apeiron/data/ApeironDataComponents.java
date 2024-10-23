@@ -12,6 +12,11 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import violet.apeiron.Apeiron;
 
+/**
+ * Class for creating and registering data components in the mod. Data components are the new way to store data on an item stack, such as
+ * modifiers.
+ * See <a href="https://docs.neoforged.net/docs/items/datacomponents/">the NeoForge docs on data components</a> for more information.
+ */
 public class ApeironDataComponents {
 
 	/**
@@ -20,10 +25,18 @@ public class ApeironDataComponents {
 	 */
 	public static final DeferredRegister.DataComponents DATA_COMPONENTS = DeferredRegister.createDataComponents(Apeiron.MODID);
 
+	/**
+	 * The codec for the {@link #MODIFIERS modifier data component}, used to make it persistent.
+	 * See <a href="https://docs.neoforged.net/docs/items/datacomponents/">the NeoForge docs on data components</a> for more information.
+	 */
 	private static final Codec<ModifierDataComponent> MODIFIER_CODEC = RecordCodecBuilder.create(instance ->
 		instance.group(Codec.INT.fieldOf("modifiers").forGetter(ModifierDataComponent::toInt)).apply(instance, ModifierDataComponent::fromInt)
 	);
 
+	/**
+	 * The stream codec for the {@link #MODIFIERS modifier data component}, used to make it network synchronized.
+	 * See <a href="https://docs.neoforged.net/docs/items/datacomponents/">the NeoForge docs on data components</a> for more information.
+	 */
 	private static final StreamCodec<ByteBuf, ModifierDataComponent> MODIFIER_STREAM_CODEC = StreamCodec.composite(
 		ByteBufCodecs.INT, 
 		ModifierDataComponent::toInt,

@@ -23,6 +23,11 @@ import violet.apeiron.data.ApeironTags;
 
 @Mod(Apeiron.MODID)
 public class Apeiron {
+
+	/**
+	 * The ID for the Apeiron mod. All mods are required to have a unique mod ID, meaning you cant simultaneously load two mods with the same ID. For
+	 * this reason, we try to make the ID something very specific to this mod. This will never be changed throughout any part of the game or program.
+	 */
 	public static final String MODID = "apeiron";
 
 	public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Apeiron.MODID);
@@ -73,6 +78,12 @@ public class Apeiron {
 		);
 	}
 
+	/**
+	 * The main class constructor, called by Neoforge when loading the mod. This registers all items, blocks, entities, and everything else in the mod.
+	 * 
+	 * @param modEventBus The event bus passed from Neoforge
+	 * @param modContainer The mod container passed from Neoforge
+	 */
 	public Apeiron(IEventBus modEventBus, ModContainer modContainer) {
 		modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
 

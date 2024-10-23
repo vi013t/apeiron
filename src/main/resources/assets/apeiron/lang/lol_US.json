@@ -24,12 +24,13 @@
 
 		// Tier 1 Mining - Andalusite
 		"item.apeiron.raw_andalusite": "poopoo pile",
-		"item.apeiron.andalusite_ingot": "poopooo Ingut",
-		"item.apeiron.andalusite_pickaxe": "poopooo Pipkacks",
+		"item.apeiron.andalusite_ingot": "poopooo ingut",
+		"item.apeiron.andalusite_nugget": "bapy poopoo",
+		"item.apeiron.andalusite_pickaxe": "poopooo pipkacks",
 		"item.apeiron.andalusite_axe": "poopoo cutter",
 		"item.apeiron.andalusite_sword": "poopooo slicey",
 		"item.apeiron.andalusite_shovel": "poopooo scoopur",
-		"item.apeiron.andalusite_helmet": "poopooo Helmet bleh",
+		"item.apeiron.andalusite_helmet": "poopooo hat bleh",
 		"item.apeiron.andalusite_chestplate": "poopooo shirt ew",
 		"item.apeiron.andalusite_leggings": "poopooo pantz",
 		"item.apeiron.andalusite_boots": "poopooo shoez",
@@ -64,6 +65,7 @@
 		// Tier 4 Mining - Cuprite
 		"item.apeiron.raw_cuprite": "rubiez",
 		"item.apeiron.cuprite_ingot": "rubie bar",
+		"item.apeiron.cuprite_nugget": "rokc candie",
 		"item.apeiron.cuprite_pickaxe": "rubie pikcake",
 		"item.apeiron.cuprite_axe": "rubie choppy",
 		"item.apeiron.cuprite_sword": "rubie stabby",

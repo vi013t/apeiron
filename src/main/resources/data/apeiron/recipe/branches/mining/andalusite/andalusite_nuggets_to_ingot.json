@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"NNN",
+		"NNN",
+		"NNN"
+	],
+	"key": {
+		"N": {
+			"item": "apeiron:andalusite_nugget"
+		}
+	},
+	"result": {
+		"count": 1,
+		"id": "apeiron:andalusite_ingot"
+	}
+}

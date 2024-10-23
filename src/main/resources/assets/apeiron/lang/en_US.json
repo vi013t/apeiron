@@ -25,6 +25,7 @@
 		// Tier 1 Mining - Andalusite
 		"item.apeiron.raw_andalusite": "Raw Andalusite",
 		"item.apeiron.andalusite_ingot": "Andalusite Ingot",
+		"item.apeiron.andalusite_nugget": "Andalusite Nugget",
 		"item.apeiron.andalusite_pickaxe": "Andalusite Pickaxe",
 		"item.apeiron.andalusite_axe": "Andalusite Axe",
 		"item.apeiron.andalusite_sword": "Andalusite Sword",
@@ -41,6 +42,7 @@
 		// Tier 2 Mining - Danburite
 		"item.apeiron.raw_danburite": "Raw Danburite",
 		"item.apeiron.danburite_ingot": "Danburite Ingot",
+		"item.apeiron.danburite_nugget": "Danburite Nugget",
 		"item.apeiron.danburite_pickaxe": "Danburite Pickaxe",
 		"item.apeiron.danburite_axe": "Danburite Axe",
 		"item.apeiron.danburite_sword": "Danburite Sword",
@@ -57,6 +59,7 @@
 		// Tier 3 Mining - Chromite
 		"item.apeiron.raw_chromite": "Raw Chromite",
 		"item.apeiron.chromite_ingot": "Chromite Ingot",
+		"item.apeiron.chromite_nugget": "Chromite Nugget",
 		"item.apeiron.chromite_pickaxe": "Chromite Pickaxe",
 		"item.apeiron.chromite_axe": "Chromite Axe",
 		"item.apeiron.chromite_sword": "Chromite Sword",
@@ -73,6 +76,7 @@
 		// Tier 4 Mining - Cuprite
 		"item.apeiron.raw_cuprite": "Raw Cuprite",
 		"item.apeiron.cuprite_ingot": "Cuprite Ingot",
+		"item.apeiron.cuprite_nugget": "Cuprite Nugget",
 		"item.apeiron.cuprite_pickaxe": "Cuprite Pickaxe",
 		"item.apeiron.cuprite_axe": "Cuprite Axe",
 		"item.apeiron.cuprite_sword": "Cuprite Sword",
@@ -90,6 +94,7 @@
 		// Tier 5 Mining - Tugtupite
 		"item.apeiron.raw_tugtupite": "Raw Tugtupite",
 		"item.apeiron.tugtupite_ingot": "Tugtupite Ingot",
+		"item.apeiron.tugtupite_nugget": "Tugtupite Nugget",
 		"item.apeiron.tugtupite_pickaxe": "Tugtupite Pickaxe",
 		"item.apeiron.tugtupite_axe": "Tugtupite Axe",
 		"item.apeiron.tugtupite_sword": "Tugtupite Sword",
@@ -107,6 +112,7 @@
 		// Tier 6 Mining - Kyanite
 		"item.apeiron.raw_kyanite": "Raw Kyanite",
 		"item.apeiron.kyanite_ingot": "Kyanite Ingot",
+		"item.apeiron.kyanite_nugget": "Kyanite Nugget",
 		"item.apeiron.kyanite_pickaxe": "Kyanite Pickaxe",
 		"item.apeiron.kyanite_axe": "Kyanite Axe",
 		"item.apeiron.kyanite_sword": "Kyanite Sword",
@@ -124,6 +130,7 @@
 		// Tier 7 Mining - Tanzanite
 		"item.apeiron.raw_tanzanite": "Raw Tanzanite",
 		"item.apeiron.tanzanite_ingot": "Tanzanite Ingot",
+		"item.apeiron.tanzanite_nugget": "Tanzanite Nugget",
 		"item.apeiron.tanzanite_pickaxe": "Tanzanite Pickaxe",
 		"item.apeiron.tanzanite_axe": "Tanzanite Axe",
 		"item.apeiron.tanzanite_sword": "Tanzanite Sword",
@@ -141,6 +148,7 @@
 		// Tier 8 Mining - Sphalerite
 		"item.apeiron.raw_sphalerite": "Raw Sphalerite",
 		"item.apeiron.sphalerite_ingot": "Sphalerite Ingot",
+		"item.apeiron.sphalerite_nugget": "Sphalerite Nugget",
 		"item.apeiron.sphalerite_pickaxe": "Sphalerite Pickaxe",
 		"item.apeiron.sphalerite_axe": "Sphalerite Axe",
 		"item.apeiron.sphalerite_sword": "Sphalerite Sword",
@@ -157,6 +165,7 @@
 		// Tier 9 Mining - Adamite
 		"item.apeiron.raw_adamite": "Raw Adamite",
 		"item.apeiron.adamite_ingot": "Adamite Ingot",
+		"item.apeiron.adamite_nugget": "Adamite Nugget",
 		"item.apeiron.adamite_pickaxe": "Adamite Pickaxe",
 		"item.apeiron.adamite_axe": "Adamite Axe",
 		"item.apeiron.adamite_sword": "Adamite Sword",

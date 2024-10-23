@@ -18,7 +18,7 @@ public class MaterialItem extends Item implements HasMaterial {
 	private final ApeironMaterial material;
 
 	private MaterialItem(ApeironMaterial material) {
-		super(new Item.Properties());
+		super(new Item.Properties().rarity(material.rarity()));
 		this.material = material;
 	}
 

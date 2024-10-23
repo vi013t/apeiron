@@ -3,6 +3,7 @@ package violet.apeiron.data;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
 
@@ -30,11 +31,11 @@ public class ModifierDataComponent {
 	}
 
 	public int toInt() {
-		return Serializer.intListToInt(Arrays.stream(this.modifiers).mapToInt(modifier -> modifier.id()).toArray());
+		return Serializer.intSetToInt(Arrays.stream(this.modifiers).mapToInt(Modifier::id).boxed().collect(Collectors.toSet()));
 	}
 
 	public static ModifierDataComponent fromInt(int modifierDataComponentId) {
-		return new ModifierDataComponent(Arrays.stream(Serializer.intToIntList(modifierDataComponentId)).<Modifier>mapToObj(id -> Modifier.fromId(id).get()).toArray(Modifier[]::new));
+		return new ModifierDataComponent(Serializer.intToIntSet(modifierDataComponentId).stream().map(id -> Modifier.fromId(id).get()).toArray(Modifier[]::new));
 	}
 
 	@Override

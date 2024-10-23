@@ -17,7 +17,7 @@ public class ModifierItem extends Item {
 	private final Modifier modifier;
 
 	public ModifierItem(Modifier modifier) {
-		super(new Item.Properties().component(ApeironDataComponents.MODIFIERS.value(), new ModifierDataComponent(modifier)));
+		super(new Item.Properties().component(ApeironDataComponents.MODIFIERS.value(), new ModifierDataComponent(modifier)).rarity(modifier.getMaterial().rarity()));
 		this.modifier = modifier;
 	}
 

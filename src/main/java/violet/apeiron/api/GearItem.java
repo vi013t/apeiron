@@ -44,7 +44,7 @@ public class GearItem {
 		private final ApeironMaterial material;
 
 		public Pickaxe(ApeironMaterial material) {
-			super(ApeironToolTiers.getToolTier(GearType.PICKAXE, material), new Item.Properties());
+			super(ApeironToolTiers.getToolTier(GearType.PICKAXE, material), new Item.Properties().rarity(material.rarity()));
 			this.material = material;
 		}
 
@@ -65,7 +65,7 @@ public class GearItem {
 		private final ApeironMaterial material;
 
 		public Axe(ApeironMaterial material) {
-			super(ApeironToolTiers.getToolTier(GearType.AXE, material), new Item.Properties());
+			super(ApeironToolTiers.getToolTier(GearType.AXE, material), new Item.Properties().rarity(material.rarity()));
 			this.material = material;
 		}
 
@@ -86,7 +86,7 @@ public class GearItem {
 		private final ApeironMaterial material;
 
 		public Shovel(ApeironMaterial material) {
-			super(ApeironToolTiers.getToolTier(GearType.SHOVEL, material), new Item.Properties());
+			super(ApeironToolTiers.getToolTier(GearType.SHOVEL, material), new Item.Properties().rarity(material.rarity()));
 			this.material = material;
 		}
 
@@ -107,7 +107,7 @@ public class GearItem {
 		private final ApeironMaterial material;
 
 		public Sword(ApeironMaterial material) {
-			super(ApeironToolTiers.getToolTier(GearType.SWORD, material), new Item.Properties().attributes(SwordItem.createAttributes(ApeironToolTiers.getToolTier(GearType.SWORD, material), 0, -2F)));
+			super(ApeironToolTiers.getToolTier(GearType.SWORD, material), new Item.Properties().rarity(material.rarity()).attributes(SwordItem.createAttributes(ApeironToolTiers.getToolTier(GearType.SWORD, material), 0, -2F)));
 			this.material = material;
 		}
 

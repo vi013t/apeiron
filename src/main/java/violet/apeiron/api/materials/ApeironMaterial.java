@@ -8,6 +8,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.FormattedText;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.network.chat.Style;
+import net.minecraft.world.item.Rarity;
 import violet.apeiron.Apeiron.Branch;
 import violet.apeiron.api.GearItem;
 import violet.apeiron.api.modifiers.Modifier;
@@ -312,6 +313,15 @@ public class ApeironMaterial {
 	public static ApeironMaterial get(Branch branch, int tier) {
 		if (tier < 1 || tier > 10) throw new IllegalArgumentException("Attempted to get the material of branch " + branch + " and tier " + tier + ", but the tier must be in [1, 10].");
 		return MATERIALS.get(new MaterialKey(branch, tier));
+	}
+
+	public Rarity rarity() {
+		return switch (this.tier) {
+			case 2 -> Rarity.UNCOMMON;
+			case 7 -> Rarity.EPIC;
+			case 9 -> Rarity.RARE;
+			default -> Rarity.COMMON;
+		};
 	}
 
 	/**
